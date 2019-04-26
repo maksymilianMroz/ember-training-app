@@ -1,0 +1,43 @@
+<div class="jumbotron text-center">
+
+    <h1>TRENINGI</h1>
+
+    <br /> <br />
+
+    <p>INFORMACJE O TWOICH TRENINGACH:</p>
+
+    <div class="form-horizontal form-group form-group-lg row">
+
+        <div class="d-flex flex-column">
+
+            {{input value=trainWhen type="text" class="form-control" placeholder="Kiedy?" autofocus="autofocus"}}
+            <br />
+            {{input value=trainHow type="email" class="form-control" placeholder="Krótki opis treningu"}}
+        </div>
+
+    </div>
+
+    <div class="form-horizontal form-group form-group-lg row">
+
+        <div class="flex flex-column">
+
+            <button disabled={{isDisabled}} class="btn btn-primary btn-lg btn-block d-flex justify-content-center"
+                {{action 'trainingData'}}>Wyślij</button>
+
+        </div>
+
+        {{#if trainingData}}
+        <div class="alert alert-success">{{updateData}}</div>
+        {{/if}}
+
+    </div>
+
+    {{#if updateData}}
+    <p><b>Data:</b> {{trainWhenNow}}</p>
+    <p><b>Opis treningu</b> {{trainHowNow}}</p>
+    <hr>
+    {{/if}}
+
+
+
+</div>

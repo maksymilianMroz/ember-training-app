@@ -3,6 +3,14 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'training-app',
+    'mapbox-gl': {
+      accessToken: 'pk.eyJ1IjoibXJvejk5IiwiYSI6ImNqdXhvbm05bTA5ZTc0NG14MnBqMWU4eDUifQ.0RFmreV35U1MxZgvBLcZaw',
+      map: {
+        style: 'mapbox://styles/mapbox/basic-v9',
+        zoom: 13,
+        center: [ -96.7969879, 32.7766642 ]
+      }
+    },
     environment,
     rootURL: '/',
     locationType: 'auto',

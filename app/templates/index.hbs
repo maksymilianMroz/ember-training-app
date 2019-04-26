@@ -1,0 +1,48 @@
+<div class="jumbotron text-center">
+
+    <h1>DANE UŻYTKOWNIKA</h1>
+
+    <br /> <br />
+
+    <p>Poniżej możesz uzupełnić/edytować swoje dane</p>
+
+    <div class="form-horizontal form-group form-group-lg row">
+
+        <div class="d-flex flex-column">
+
+            {{input value=name type="text" class="form-control" placeholder="Podaj imię i nazwisko" autofocus="autofocus"}}
+            <br />
+            {{input value=emailAddress type="email" class="form-control" placeholder="Podaj adres e-mail"}}
+            <br />
+            {{input value=address type="text" class="form-control" placeholder="Podaj adres zamieszkania"}}
+
+        </div>
+
+    </div>
+
+    <div class="form-horizontal form-group form-group-lg row">
+
+        <div class="flex flex-column">
+
+            <button disabled={{isDisabled}} class="btn btn-primary btn-lg btn-block d-flex justify-content-center"
+                {{action 'updateData'}}>Wyślij</button>
+
+        </div>
+
+        {{#if updateData}}
+        <div class="alert alert-success">{{updateData}}</div>
+        {{/if}}
+
+    </div>
+
+    {{#if updateData}}
+    <p><b>Imię i Nazwisko:</b> {{nameNow}}</p>
+    <p><b>Adres E-mail:</b> {{emailNow}}</p>
+    <p><b>Adres:</b> {{addressNow}}</p>
+    <br />
+    {{/if}}
+
+
+
+
+</div>
