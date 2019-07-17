@@ -2,7 +2,7 @@
 
 **Simple app which I made as a recruitment task. I had to use ember.js which I never used before. I think it was a lot of fun. I'm sure I'll be back to ember.js at some point. Perhaps only in order to get to know something new.**
 
-# How to run this app
+# How to run this app below
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
